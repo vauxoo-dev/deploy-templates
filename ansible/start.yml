@@ -1,0 +1,20 @@
+- hosts: local
+  vars_files:
+    - "{{ vars_file|default('vars.yml') }}"
+
+  tasks:
+    - name: Start a new Odoo conatiner
+      docker:
+        image: "{{ image_name }}"
+        name: "{{ container_name }}"
+        hostname: "{{ container_hostname }}"
+        command: "/entry_point.py"
+        ports:
+          - "{{ odoo_mapped_port }}:8069"
+          - "{{ odoo_mapped_port_lp }}:8072"
+        env: "DB_HOST={{ db_server }},DBFILTER={{ db_filter }},DB_NAME={{ db_name }},WITHOUT_DEMO={{ without_demo }},ODOO_CONFIG_FILE={{ odoo_config_file }},DB_USER={{ db_user }},DB_PASSWORD={{ db_password }},ADMIN_PASSWD={{ admin_passwd }}"
+        volumes:
+          - "{{ working_folder }}/ssh:/home/odoo/.ssh"
+          - "{{ working_folder }}/logs:/var/log/supervisor"
+          - "{{ working_folder }}/filestore:/home/odoo/.local/share/Odoo/filestore"
+          - "{{ working_folder }}/tmp:/tmp"

@@ -1,0 +1,19 @@
+image_name: quay.io/vauxoo/image_name:image_tag
+
+container_name: container_name_you_want
+container_hostname: container_hostname_you_want
+
+odoo_mapped_port: 5000
+odoo_mapped_port_lp: 5001
+
+odoo_config_file: "/home/odoo/.openerp_serverrc"
+
+db_server: "172.17.42.1"
+db_filter: .*
+db_name: database_name
+db_user: postgres_user
+db_password: postgres_user_password
+without_demo: True
+admin_passwd: odoo_admin_password
+
+working_folder: /home/runbotbuilder/yoytec80/shared_volumes_nhomar
