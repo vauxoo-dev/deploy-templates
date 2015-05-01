@@ -16,5 +16,5 @@
         volumes:
           - "{{ working_folder }}/ssh:/home/odoo/.ssh"
           - "{{ working_folder }}/logs:/var/log/supervisor"
-          - "{{ working_folder }}/filestore:/home/odoo/.local/share/Odoo/filestore"
+          - "{{ working_folder }}/filestore:/home/odoo/.local/share/Odoo"
           - "{{ working_folder }}/tmp:/tmp"
