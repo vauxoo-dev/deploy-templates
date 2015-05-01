@@ -16,4 +16,5 @@ db_password: postgres_user_password
 without_demo: True
 admin_passwd: odoo_admin_password
 
-working_folder: /home/runbotbuilder/yoytec80/shared_volumes_nhomar
+working_folder: /the/folder/host/filesystem
+
