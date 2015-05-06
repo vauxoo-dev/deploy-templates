@@ -6,7 +6,8 @@ container_hostname: container_hostname_you_want
 odoo_mapped_port: 5000
 odoo_mapped_port_lp: 5001
 
-odoo_config_file: "/home/odoo/.openerp_serverrc"
+odoo_home: "/home/odoo"
+odoo_config_file: "{{ odoo_home }}/.openerp_serverrc"
 
 db_server: "172.17.42.1"
 db_filter: .*
