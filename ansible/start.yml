@@ -7,7 +7,7 @@
       docker:
         image: "{{ image_name }}"
         name: "{{ container_name }}"
-        hostname: "{{ container_hostname }}"
+        hostname: "{{ container_hostname }}.{{ domain }}"
         command: "/entry_point.py"
         ports:
           - "{{ odoo_mapped_port }}:8069"
