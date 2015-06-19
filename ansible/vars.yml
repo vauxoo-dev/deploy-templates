@@ -1,5 +1,6 @@
 image_name: quay.io/vauxoo/image_name:image_tag
 
+domain: example.com
 container_name: container_name_you_want
 container_hostname: container_hostname_you_want
 
