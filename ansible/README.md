@@ -33,5 +33,6 @@ The following vars has the same effect than Odoo config parameters, atually they
 - db_name
 - db_user
 - db_password
+- db_port
 - without_demo
 - admin_passwd
