@@ -13,7 +13,7 @@
         ports:
           - "{{ odoo_mapped_port }}:8069"
           - "{{ odoo_mapped_port_lp }}:8072"
-        env: "DB_HOST={{ db_server }},DBFILTER={{ db_filter }},DB_NAME={{ db_name }},WITHOUT_DEMO={{ without_demo }},ODOO_CONFIG_FILE={{ odoo_config_file }},DB_USER={{ db_user }},DB_PASSWORD={{ db_password }},ADMIN_PASSWD={{ admin_passwd }},LIST_DB={{ list_db|default('True') }},ODOO_USER={{ odoo_user|default('odoo') }}"
+        env: "DB_HOST={{ db_server }},DBFILTER={{ db_filter }},DB_NAME={{ db_name }},WITHOUT_DEMO={{ without_demo }},ODOO_CONFIG_FILE={{ odoo_config_file }},DB_USER={{ db_user }},DB_PORT={{ db_port|default(5432) }},DB_PASSWORD={{ db_password }},ADMIN_PASSWD={{ admin_passwd }},LIST_DB={{ list_db|default('True') }},ODOO_USER={{ odoo_user|default('odoo') }}"
         volumes:
           - "{{ working_folder }}/ssh:{{ odoo_home }}/.ssh"
           - "{{ working_folder }}/filestore:{{ odoo_home }}/.local/share/Odoo"

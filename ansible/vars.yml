@@ -16,6 +16,7 @@ db_filter: .*
 db_name: database_name
 db_user: postgres_user
 db_password: postgres_user_password
+db_port: 5432
 without_demo: True
 admin_passwd: odoo_admin_password
 list_db: False
