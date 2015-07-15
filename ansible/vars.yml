@@ -7,6 +7,7 @@ container_hostname: container_hostname_you_want
 odoo_mapped_port: 5000
 odoo_mapped_port_lp: 5001
 
+odoo_user: "odoo"
 odoo_home: "/home/odoo"
 odoo_config_file: "{{ odoo_home }}/.openerp_serverrc"
 
@@ -15,8 +16,12 @@ db_filter: .*
 db_name: database_name
 db_user: postgres_user
 db_password: postgres_user_password
+db_port: 5432
 without_demo: True
 admin_passwd: odoo_admin_password
+list_db: False
+
+memory_limit: 2048
 
 working_folder: /the/folder/host/filesystem
 
