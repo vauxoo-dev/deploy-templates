@@ -9,7 +9,7 @@
         name: "{{ container_name }}"
         hostname: "{{ container_hostname }}.{{ domain }}"
         command: "/entry_point.py"
-        memory: "{{ memory_limit|default(0)}}"
+        memory_limit: "{{ memory_limit|default('512MB') }}"
         ports:
           - "{{ odoo_mapped_port }}:8069"
           - "{{ odoo_mapped_port_lp }}:8072"
