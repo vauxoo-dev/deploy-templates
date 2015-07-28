@@ -21,7 +21,7 @@ without_demo: True
 admin_passwd: odoo_admin_password
 list_db: False
 
-memory_limit: 2048
+memory_limit: 512MB
 
 working_folder: /the/folder/host/filesystem
 
